@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Constructor</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div class="header_title title">
+				Выберите нужные аттрибуты изображения
+			</div>
+		</div>
+		<main>
+			<div class="selector">
+				<div class="selector_items">
+					<li class='list'>
+						<form class="selector_items-item border">
+							<label class='label'  for="img_">Введите URL изображения: <input type="text" id="url" placeholder=" URL" value="https://pm1.narvii.com/7706/9c0c130c68702305df7aea435a91023c2789dbcfr1-720-810v2_hq.jpg" required>
+								<input type="button" value="Submit" class="border" onclick="set_image()">
+							</label>
+						</form>
+					</li>
+					<li class='list'>
+						<form class="selector_items-item border">
+							<label class='label'  for="img_">Сделать изображение круглым? 
+								<input  type="button" class="border" value="Да" onclick="round_img()">
+								<input  type="button" class="border" value="Нет" onclick="unround_img()">
+							</label>
+						</form>
+					</li>
+					<li class='list'>
+						<form class="selector_items-item border">
+							<label class='label'  for="img_">Прозрачность 
+								<input  type="button" class="border" value="20%" onclick="set_opacity(20)">
+								<input  type="button" class="border" value="40%" onclick="set_opacity(40)">
+								<input  type="button" class="border" value="60%" onclick="set_opacity(60)">
+								<input  type="button" class="border" value="80%" onclick="set_opacity(80)">
+								<input  type="button" class="border" value="100%" onclick="set_opacity(100)">
+							</label>
+						</form>
+					</li>
+					<li class='list'>
+						<form class="selector_items-item border">
+							<label class='label'  for="img_">Повернуть 
+								<input  type="button" class="border" value="Влево" onclick="turn(-45)">
+								<input  type="button" class="border" value="Вправо" onclick="turn(45)">
+								
+							</label>
+						</form>
+					</li>
+				</div>
+
+				<div class="selector_image">
+					<div class="title">Предпросмотр</div>
+					<div class="selector_image_container">
+						<img src="" id="image" alt="Здесь должна быть ваша картинка">
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="code.js"></script>
+</body>
+</html>
